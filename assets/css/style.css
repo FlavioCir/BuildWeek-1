@@ -4,3 +4,56 @@ body, html{ font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Se
 h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
 ol,ul{list-style-type: none;}
 img{height: auto;}
+h1 span {
+    color:#FF4F02;
+}
+#prezzi {
+    padding-top: 30px;
+}
+h3 span {
+    color:#FF4F02;
+}
+#prezzi p {
+    color: gray;
+}
+#prezzi ul li span{
+    color: #938463;
+}
+
+.descrizioneMenu h1{
+    text-align: center;
+}
+#prezzi .descrizioneMenu > p {
+    text-align: center;
+    line-height: 20px;
+    padding: 20px;
+}
+#prezzi hr {
+    width: 120px;
+}
+#prezzi .descrizioneMenu .lista-prezzi {
+    padding-top: 50px;
+}
+.speciali {
+    padding: 10px 0px;
+}
+.lista-prezzi {
+    padding: 20px;
+}
+.lista-prezzi ul li {
+    padding-bottom: 20px;
+}
+.pulsante {
+    color: #FF4F02;
+    border: 1px solid #FF4F02;
+    text-decoration: none;
+    float: right;
+    padding: 30px 80px 30px 80px;
+}
+.oggetti h2 {
+    padding-bottom: 10px;
+}
+.oggetti p{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
