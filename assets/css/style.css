@@ -1,6 +1,84 @@
 /* ! Reset */
-body, html{ font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; box-sizing: border-box;margin: 0;padding: 0;}
+body, html{ font-size: 16px; font-family: myFont, sans-serif; box-sizing: border-box;margin: 0;padding: 0;}
 :before,*:after{ box-sizing: border-box; }
 h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
 ol,ul{list-style-type: none;}
 img{height: auto;}
+a{text-decoration: none;}
+
+@font-face{
+    font-family: myFont;
+    src: url('../fonts/fontawesome-webfont.woff');
+    src: url('../fonts/fontawesome-webfont.ttf');
+    src: url('../fonts/ufonts.com_tw-cen-mt.ttf');
+}
+
+/* ---------------------------------------Contacts--------------------------------------- */
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer h1 {
+    font-weight: 500;
+    padding: 1.5em;
+}
+
+.contactContainer h1 span {
+    font-size: 1.2em;
+    color: #ff530a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* La riga sotto contacts */
+.contactInner {
+    width: 140px;
+    height: 1px;
+    margin: 0px auto;
+    border-bottom: 2px solid #C8C1B3;
+}
+
+.contactContainer h3 {
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.contactContainer h3 span {
+    color: #ff530a;
+    text-transform: uppercase;
+}
+
+.contactFormContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+}
+
+.contactFormContainer input, .contactFormContainer textarea {
+    width: 95%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin: 0.5em 0;
+}
+
+.contactFormContainer textarea {
+    height: 100px;
+}
+
+::placeholder {
+    font-family: myFont, sans-serif;
+}
+
+.contactFormContainer a {
+    background-color: #FF4F02;
+    color: white;
+    padding: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 2em 0;
+    font-size: 0.9em;
+}
+
