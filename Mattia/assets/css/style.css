@@ -1,0 +1,313 @@
+/* ! Reset */
+body,
+html {
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  height: auto;
+}
+/*/////////////////Mattia css blog inizio//////////////*/
+/******************************************************/
+
+#blog {
+  background: url("../images/blog/blog-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+  padding-block: 7em;
+}
+
+#blog::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/overlay-pattern.png") black;
+  opacity: 0.3;
+}
+
+
+
+#blog > div {
+  position: relative;
+}
+
+
+
+
+
+
+
+/******************************************************/
+#blog h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  position: relative;
+}
+
+
+#blog span {
+  color: #ff530a;
+  font-weight: 800;
+}
+
+#blog p {
+  color: #959595;
+  font-size: 15px;
+  padding-bottom: 1em;
+  padding-inline: 2.5em;
+  font-weight: 400;
+
+}
+
+#blog figure {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  align-content: flex-end;
+  align-items: center;
+  width: 90vw;
+}
+
+#blog img {
+  height: -webkit-fill-available;
+  width: 100%;
+}
+
+#blog figcaption {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-inline: 1em;
+
+}
+
+
+#blog hr {
+  width: 8em;
+  margin-block: 2.5em;
+  position: relative;
+}
+
+figure hr{
+  margin-block: 1.5em !important;
+}
+
+#blog button{
+  margin-top: 2em;
+  width: 20em;
+  height: 6em;
+  position: relative;
+  background: #ff530a;
+  font-weight: 600;
+  border: none;
+}
+
+#blog a{
+  text-decoration: none;
+  color:white;
+}
+
+
+/******************************************************/
+
+
+figure div {
+  background: white;
+  text-align: center;
+  width: 100%;
+  padding-block: 2px;
+}
+
+
+.overflow {
+  overflow: hidden;
+}
+
+/******************************************************/
+/*@-webkit-keyframes all{
+  100%{
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
+@keyframes all {
+  100%{
+    transform: scale(1.2) rotate(10deg);      
+  }
+}
+
+
+#blog figure:hover{
+  -webkit-transition: all 0.8s ease-out;
+  
+  transition: all 0.8s ease-out;
+
+} 
+*/
+
+
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+    transform-origin: 84% 84%;
+  }
+
+  100% {
+    -webkit-transform: scale(1.25) translate(20px, 15px);
+    /*transform: scale(1.25) translate(20px, 15px);*/
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transform: scale(1.3) rotateZ(5deg) translate(10px, 15px);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+    transform-origin: 84% 84%;
+  }
+
+  100% {
+    -webkit-transform: scale(1.25) translate(20px, 15px);
+    /*transform: scale(1.25) translate(20px, 15px);*/
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transform: scale(1.3) rotateZ(5deg) translate(10px, 15px);
+  }
+}
+
+
+#blog img:hover {
+  -webkit-animation: zoom 1s ease-out both;
+  animation: zoom 1s ease-out both;
+}
+
+/*********************************************************/
+
+
+
+
+/*********************************************************/
+
+
+
+
+@media screen and (min-width: 767px) {
+  #blog figure {
+    align-content: flex-end;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  #contenitore3 {
+    flex-direction: row-reverse !important;
+  }
+
+  #contenitore4 {
+    flex-direction: row-reverse !important;
+  }
+
+
+  #blog figcaption {
+    padding-top: 70px;
+  }
+
+
+  .overflow{
+    position: relative;
+  }
+
+  .overflow div{
+    position: absolute;
+    background:white;
+    width: 17em;
+    height: 12em;
+    top: 5em;
+    left: 100%;
+    transform: rotate(45deg);
+    
+  }
+
+
+  #contenitore3 img+div{
+    left: -17em;
+    top:10%;
+  }
+  #contenitore4 img+div{
+    left: -17em;
+    top: 10%;
+  }
+
+
+}
+
+/************************************************************/
+@media screen and (min-width:990px) {
+
+  #blog > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #blog figure {
+    margin: 0;
+    width: 45vw;
+  }
+
+  #blog h1{
+    font-size: 30px;
+  }
+
+  figure div{
+    padding-block: 0;
+  }
+
+  figcaption{
+    padding-top: 3.5em;
+  }
+
+}
+
+/*//////////////////////Mattia css fine////////////////////////////*/
