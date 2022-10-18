@@ -1,0 +1,252 @@
+/* ! Reset */
+body, html{ font-size: 16px; font-family: myFont, sans-serif; box-sizing: border-box;margin: 0;padding: 0;}
+:before,*:after{ box-sizing: border-box; }
+h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
+ol,ul{list-style-type: none;}
+img{height: auto;}
+
+@font-face{
+  font-family: myFont;
+  src: url('../fonts/fontawesome-webfont.woff');
+  src: url('../fonts/fontawesome-webfont.ttf');
+  src: url('../fonts/ufonts.com_tw-cen-mt.ttf');
+}
+
+/* ---------------------------------------Header--------------------------------------- */
+
+.headerBackground {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: -1;
+}
+
+.headerBackground:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+   content: "";
+  background: url("../images/overlay-pattern.png");
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.headerImg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------nav header-------------- */
+#main-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+	background: linear-gradient(to right, #ffffff 0%, #ffffff9a 100%);
+	text-align: center;
+  margin: 0 16px;
+	padding: 20px 20px 30px 10px;
+  margin-top: -73px;
+}
+
+/* nascondere il checkbox */
+.navToggle {
+	display: none;
+}
+
+/* menu hamburger */
+.navLabel {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	margin-right: 17px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navLabel span {
+	display: block;
+	background: #e94c3d;
+	height: 3px;
+	width: 20px;
+	position: relative;
+  margin-bottom: 3px;
+  transition: all .5s ease-in-out;
+}
+
+.navLabel span::before, .navLabel span::after {
+	content: '';
+	position: absolute;
+}
+
+.navLabel span::before {
+	bottom: 10px;
+}
+.navLabel span::after {
+	top: 10px;
+}
+
+#menu {
+	position: absolute;
+	background: linear-gradient(to right, #ffffff 0%, #ffffff9a 100%);
+	text-align: left;
+  left: 0;
+	top: 100%; /* partenza slide */
+	width: 100%;
+
+  /* animazione slide navbar */
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform .4s ease-in-out;
+}
+
+#menu li {
+	padding: 10px 15px;
+  position: relative; /* per l'underline */
+}
+
+#menu a {
+	text-decoration: none;
+	color: #2e2e2e;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity .15s ease-in-out;
+}
+
+#navToggle:checked + #menu {
+	transform: scale(1, 1);
+}
+#navToggle:checked ~ #menu a {
+	opacity: 1; /* rendere visibile la li quando apri */
+	transition: opacity .25s ease-in-out .35s;
+}
+
+/* animazione underline */
+
+.liAnim:after {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  margin: 0 15px;
+  background-color: #ff5333;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.liAnim:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* responsive Nav */
+#navResponsive {
+  display: none;
+}
+
+#navResponsive a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+#navResponsive li{
+  display: inline-block;
+  position: relative;
+  color: #ff5333;
+}
+
+#navResponsive li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff5333;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  margin-bottom: -5px;
+}
+
+#navResponsive li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* mediaquery */
+@media screen and (min-width: 768px){
+	.navLabel {
+		display: none;
+	}
+
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #main-header {
+    padding: 30px 23px 31px 23px;
+    /* border-bottom: 1px solid red; */
+    background-color: white;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: -85px;
+  }
+
+  #navResponsive {
+    display: flex;
+  }
+
+
+  #navResponsive ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 32px;
+
+  }
+
+  #navResponsive li {
+    margin: 0 13px;
+  }
+
+}
+
+@media screen and (min-width: 992px){
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #main-header img {
+    padding-right: 160px;
+  }
+
+  #main-header {
+    max-width: 890px;
+    padding: 40px 10px 21px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  #main-header {
+    max-width: 1090px;
+  }
+
+  #main-header img {
+    padding-right: 365px;
+  }
+}
