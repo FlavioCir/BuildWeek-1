@@ -1,69 +1,70 @@
 /* ! Reset */
-body,
-html {
+body,html {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-:before,
-*:after {
+:before,*:after {
     box-sizing: border-box;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+h1,h2,h3,h4,h5,h6,p,ol,ul {
     margin: 0;
     padding: 0;
 }
-
-ol,
-ul {
+ol,ul {
     list-style-type: none;
 }
-
 img {
     height: auto;
 }
-
-h1 span {
+/*COLORI*/
+h1 span, h3 span {
     color: #FF4F02;
 }
-
-#prezzi {
-    padding: 70px 0px;
-}
-
-h3 span {
-    color: #FF4F02;
-}
-
 #prezzi p {
     color: gray;
 }
-
 #prezzi ul li span {
     color: #938463;
     font-size: 14px;
 }
-
+/*Dimensioni/Margini/Padding*/
+#prezzi {
+    padding: 70px 0px;
+}
+#prezzi hr {
+    width: 120px;
+}
+#prezzi .descrizioneMenu .lista-prezzi {
+    padding-top: 50px;
+}
+.speciali {
+    padding: 10px 0px;
+}
+.lista-prezzi {
+    padding: 20px;
+}
+.lista-prezzi ul li {
+    padding-bottom: 20px;
+}
 .titolo {
     padding: 40px 0px;
 }
-
+.oggetti h2 {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.oggetti p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+/*ALLINEAMENTI*/
 .descrizioneMenu h1 {
     text-align: center;
 }
-
 #prezzi .descrizioneMenu>p {
     text-align: center;
     line-height: 20px;
@@ -71,27 +72,7 @@ h3 span {
     font-size: 14px;
     line-height: 1.7;
 }
-
-#prezzi hr {
-    width: 120px;
-}
-
-#prezzi .descrizioneMenu .lista-prezzi {
-    padding-top: 50px;
-}
-
-.speciali {
-    padding: 10px 0px;
-}
-
-.lista-prezzi {
-    padding: 20px;
-}
-
-.lista-prezzi ul li {
-    padding-bottom: 20px;
-}
-
+/*pulsante*/
 .pulsante {
     color: #FF4F02;
     border: 1px solid #FF4F02;
@@ -99,18 +80,10 @@ h3 span {
     float: right;
     padding: 30px 80px 30px 80px;
 }
-
-.oggetti h2 {
-    padding-bottom: 10px;
-    font-size: 20px;
+.tooltip {
+    display: none;
 }
-
-.oggetti p {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    font-size: 14px;
-}
-
+/*MediaQueries adattive*/
 @media screen and (min-width:767px) {
     #prezzi {
         padding: 70px 0px;
@@ -119,8 +92,7 @@ h3 span {
     #prezzi .descrizioneMenu > p {
         padding: 30px 0px 0px;
     }
-
-    .container {
+    .contenitore1 {
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
@@ -128,8 +100,7 @@ h3 span {
         display: block;
         width: 600px;
     }
-
-    .coco {
+    .contenitore2 {
         margin-left: -15px;
         margin-right: -15px;
         display: block;
@@ -148,17 +119,42 @@ h3 span {
        position: relative;
        display: inline-block;
        background: white;
-       z-index: 90;
+       z-index: 19;
     }
     .oggetti span {
         float: right;
         position: absolute;
         top: 0px;
-        right: -12px;
+        right: 0px;
     }
     .lineaPrezzi {
-        border: 1px dotted gray;
+        border-bottom: 2px dotted gray;
         position: relative;
         top: -20px;
+    }
+    .animazionePrezzi {
+        position: relative;
+            display: inline-block;
+            border-bottom: 2px solid black;
+        
+    }
+    .animazionePrezzi {
+        position: relative;
+            display: inline-block;
+            border-bottom: 2px solid black;
+        
+    }
+}
+@media screen and (min-width:992px) {
+    .contenitore1 {
+        width: 900px;
+    }
+    #prezzi {
+        padding: 70px 0px 120px 0px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .contenitore1{
+        width: 1000px;
     }
 }
