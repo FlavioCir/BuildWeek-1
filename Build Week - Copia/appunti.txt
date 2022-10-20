@@ -1,0 +1,38 @@
+Sito
+https://demo.themefisher.com/restaurant/
+
+header position sticky
+
+menu hamburger quando responsive
+
+sotto i 576 px è il LAYOUT di partenza
+
+Breackpoint di budstrap: dobbiamo vedere quali usare
+
+min-width: 576px
+
+min-width: 768px h1 2.2em,  h2 1.5em
+
+min-width: 1200px
+
+min-width: 1400px
+
+80% viewport
+
+Alessandro HOME <header>/<nav>
+
+<main>
+
+Gloria ABOUT US e NEWS <div>
+
+Mattia BLOG <section>
+
+Mauro MENU <section>
+
+Francesco CONTATTI <section>
+
+<main>
+
+Flavio FOOTER <footer>
+
+
